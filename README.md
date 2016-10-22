@@ -5,7 +5,7 @@ A simple textual progress bar.
 
 ## Installing
 
-`$ npm install progress-bar`
+`$ npm install progress-barzz`
 
 
 ## Usage
