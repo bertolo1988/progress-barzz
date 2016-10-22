@@ -1,9 +1,9 @@
 {
-  "name": "progress-bar",
+  "name": "progress-barzz",
   "version": "1.0.0",
   "description": "A simple textual progress bar",
   "main": "demo.js",
-  "homepage": "https://github.com/bertolo1988/progress-bar#readme",
+  "homepage": "https://github.com/bertolo1988/progress-barzz#readme",
   "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
   "scripts": {
     "start": "node demo.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bertolo1988/progress-bar.git"
+    "url": "git+https://github.com/bertolo1988/progress-barzz.git"
   },
   "keywords": [
     "progress",
@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bertolo1988/progress-bar/issues"
+    "url": "https://github.com/bertolo1988/progress-barzz/issues"
   },
   "devDependencies": {
     "jshint": "2.9.3",
