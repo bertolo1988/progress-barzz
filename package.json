@@ -1,0 +1,38 @@
+{
+  "name": "progress-bar",
+  "version": "1.0.0",
+  "description": "A simple textual progress bar",
+  "main": "demo.js",
+  "directories": {
+    "test": "test"
+  },
+  "homepage": "https://github.com/bertolo1988/progress-bar#readme",
+  "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
+  "scripts": {
+    "start": "node demo.js",
+    "lint": "jshint --show-non-errors --exclude ./node_modules .",
+    "test": "npm run lint && mocha test --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bertolo1988/progress-bar.git"
+  },
+  "keywords": [
+    "progress",
+    "bar",
+    "text",
+    "console",
+    "char"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bertolo1988/progress-bar/issues"
+  },
+  "devDependencies": {
+    "jshint": "2.9.3",
+    "mocha": "3.1.2"
+  },
+  "dependencies": {
+    "moment": "2.15.1"
+  }
+}
