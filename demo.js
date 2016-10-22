@@ -1,4 +1,4 @@
-var Progress = require('./dist/progress-bar');
+var Progress = require('./dist/progress-barzz');
 
 const HASHES = 20;
 const timeout = 200;

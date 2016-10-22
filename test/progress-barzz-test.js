@@ -1,5 +1,5 @@
 var should = require('should');
-var Progress = require('../dist/progress-bar');
+var Progress = require('../dist/progress-barzz');
 
 describe('progress bar test', function() {
 

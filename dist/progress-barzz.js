@@ -5,7 +5,7 @@ const INCOMPLETE = '-';
 const MAX_TICK_HIST = 15;
 const PROGRESS_BAR_SIZE = 25;
 
-function progressBar() {
+function progressBarzz() {
 
     var done, todo, tickHistory;
 
@@ -89,4 +89,4 @@ function progressBar() {
     };
 }
 
-module.exports = progressBar();
+module.exports = progressBarzz();

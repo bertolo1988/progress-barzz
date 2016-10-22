@@ -1,4 +1,4 @@
-# progress-bar
+# progress-barzz
 
 A simple textual progress bar.
 
