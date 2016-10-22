@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "A simple textual progress bar",
   "main": "demo.js",
-  "directories": {
-    "test": "test"
-  },
   "homepage": "https://github.com/bertolo1988/progress-bar#readme",
   "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
   "scripts": {
