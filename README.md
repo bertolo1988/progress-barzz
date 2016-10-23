@@ -1,6 +1,13 @@
 # progress-barzz
 
-A simple textual progress bar.
+A simple textual progress bar with a time estimation.
+
+[![NPM Version][npm-image]][npm-url]
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/40b9022c42024111b021e34014191ba9)](https://www.codacy.com/app/tiagobertolo/progress-barzz?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bertolo1988/progress-barzz&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/bertolo1988/progress-barzz.svg?branch=master)](https://travis-ci.org/bertolo1988/progress-barzz)
+[![dependencies Status](https://david-dm.org/bertolo1988/progress-barzz/status.svg)](https://david-dm.org/bertolo1988/progress-barzz)
+[![devDependencies Status](https://david-dm.org/bertolo1988/progress-barzz/dev-status.svg)](https://david-dm.org/bertolo1988/progress-barzz?type=dev)
+[![MIT License][license-image]][license-url]
 
 
 ## Installing
@@ -53,3 +60,12 @@ For further instructions check `demo.js`.
 Contributions, requests or pull requests are welcome & appreciated!
 
 Send [me](https://github.com/bertolo1988/) an email if you have questions regarding possible contributions.
+
+## License
+
+  [MIT](LICENSE)
+
+[npm-image]: https://img.shields.io/npm/v/progress-barzz.svg
+[npm-url]: https://www.npmjs.com/package/progress-barzz
+[license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-url]: LICENSE
