@@ -9,11 +9,18 @@ A simple textual progress bar with a time estimation.
 [![devDependencies Status](https://david-dm.org/bertolo1988/progress-barzz/dev-status.svg)](https://david-dm.org/bertolo1988/progress-barzz?type=dev)
 [![MIT License][license-image]][license-url]
 
+```js
+let Progress = require('./dist/progress-barzz');
+Progress.init(10);
+console.log(Progress.tick());
+```
+
 
 ## Installing
 
-`$ npm install progress-barzz`
-
+```bash
+$ npm install --save progress-barzz
+````
 
 ## Usage
 
@@ -52,8 +59,9 @@ For further instructions check `demo.js`.
 
 ## Tests
 
-`$ npm test`
-
+```bash
+$ npm test
+```
 
 ## Contributing
 
