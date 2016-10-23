@@ -35,7 +35,7 @@ For further instructions check `demo.js`.
 
 ## Demo output example
 
-```bash
+```
 1/20 [#------------------------] 5% 0s/tick ETA:19:40:54
 2/20 [##-----------------------] 10% 0s/tick ETA:19:40:55
 3/20 [###----------------------] 15% 0s/tick ETA:19:40:56
