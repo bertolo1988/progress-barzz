@@ -1,8 +1,12 @@
-var should = require('should');
+/* var should = require('should');
+const Utils = require('../src/Utils');
 var Progress = require('../dist/progress-barzz');
 
 describe('progress bar test', function () {
-  it.skip('if has 10 elements and spends 2 seconds in the first, it should give ETA for 10x2=20', async () => {});
+  it.skip('if has 10 elements and spends 2 seconds in the first, it should give ETA for 10x2=20', async () => {
+    let maxTicks = 10;
+    let minTimePerTickMs = 2000;
+  });
 
   it('should see the desired progress bars', (done) => {
     const tickTime = 300;
@@ -99,3 +103,4 @@ describe('progress bar test', function () {
     done();
   });
 });
+ */
