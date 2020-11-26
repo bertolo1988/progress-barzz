@@ -1,14 +1,17 @@
 {
   "name": "progress-barzz",
   "version": "1.0.2",
-  "description": "A simple textual progress bar",
+  "description": "A simple textual progress bar for javascript",
   "main": "dist/progress-barzz.js",
   "homepage": "https://github.com/bertolo1988/progress-barzz#readme",
   "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
   "scripts": {
     "start": "node demo.js",
-    "lint": "jshint --show-non-errors --exclude ./node_modules .",
-    "test": "npm run lint && mocha test --recursive"
+    "prettier-check": "npx prettier --check .",
+    "clean": "rm -rf node_modules && npm i",
+    "lint": "eslint .",
+    "test-only": "NODE_ENV=test mocha --bail --recursive test",
+    "test": "npm run prettier-check && npm run lint && npm run test-only"
   },
   "repository": {
     "type": "git",
@@ -26,11 +29,15 @@
     "url": "https://github.com/bertolo1988/progress-barzz/issues"
   },
   "devDependencies": {
-    "jshint": "2.9.3",
-    "mocha": "3.1.2"
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-sort-exports": "^0.3.2",
+    "mocha": "3.1.2",
+    "prettier": "2.2.0",
+    "should": "11.1.1"
   },
   "dependencies": {
-    "moment": "2.15.1",
-    "should": "11.1.1"
+    "moment": "2.15.1"
   }
 }
