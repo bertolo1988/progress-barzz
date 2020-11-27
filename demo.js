@@ -1,13 +1,16 @@
-let Progress = require('./dist/progress-barzz');
+let Progress = require('./src/ProgressBarzz');
 
-const HASHES = 20;
-const timeout = 200;
-
-function printTick() {
-  console.log(Progress.tick());
+function sleep(time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-Progress.init(HASHES);
-for (let i = 0; i < HASHES; i++) {
-  setTimeout(printTick, timeout * i);
+async function run() {
+  const maxTicks = 5;
+  let barGenerator = new Progress(maxTicks);
+  for (let i = 0; i < maxTicks; i++) {
+    await sleep(1000);
+    console.log(barGenerator.tick());
+  }
 }
+
+run();

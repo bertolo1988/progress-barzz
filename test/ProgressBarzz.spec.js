@@ -38,6 +38,27 @@ describe('progress bar test', function () {
     bar.should.be.an.instanceOf(Object).and.have.property('tick');
   });
 
+  it('bar should not exceed 30 length even if ticks go beyond the expected', () => {
+    const maxTicks = 1;
+    let barGenerator = new Progress(maxTicks);
+    barGenerator.tick();
+    let bar = barGenerator.tick();
+    let barParts = splitBarParts(bar);
+    barParts.graph.length.should.be.lessThanOrEqual(barGenerator.maxBarSize);
+  });
+
+  it('percentage not exceed 100% even if ticks go beyond the expected', () => {
+    const maxTicks = 1;
+    let barGenerator = new Progress(maxTicks);
+    barGenerator.tick();
+    barGenerator.tick();
+    let bar = barGenerator.tick();
+    let barParts = splitBarParts(bar);
+    parseInt(
+      Utils.getDigitsFromString(barParts.percentage)
+    ).should.be.lessThanOrEqual(100);
+  });
+
   it('should render a complete progress bar on tick', () => {
     const maxTicks = 1;
     let barGenerator = new Progress(maxTicks);

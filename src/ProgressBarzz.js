@@ -1,15 +1,12 @@
 const moment = require('moment');
 
-const PROGRESS_BAR_SIZE = 30;
-const COMPLETE = '#';
-const INCOMPLETE = '-';
-
 class ProgressBarzz {
   constructor(maxTicks) {
     if (!maxTicks)
       throw new Error(
         'ProgressBarzz|Maximum number of ticks needs to be specified!'
       );
+    this.maxBarSize = 30;
     this.etaMomentFormat = 'lll';
     this.begin = moment();
     this.tickCount = 0;
@@ -22,7 +19,7 @@ class ProgressBarzz {
   }
 
   _getPercentage() {
-    return Math.floor((this.tickCount / this.maxTicks) * 100);
+    return Math.min(100, Math.floor((this.tickCount / this.maxTicks) * 100));
   }
 
   _getAverageTimePerTickMs() {
@@ -42,9 +39,11 @@ class ProgressBarzz {
   }
 
   _renderBarGraph(percentage) {
+    const COMPLETE = '#';
+    const INCOMPLETE = '-';
     let bar = '';
-    let completes = Math.floor((percentage * PROGRESS_BAR_SIZE) / 100);
-    let incompletes = PROGRESS_BAR_SIZE - completes;
+    let completes = Math.floor((percentage * this.maxBarSize) / 100);
+    let incompletes = Math.max(0, this.maxBarSize - completes);
     for (let i = 0; i < completes; i++) {
       bar += COMPLETE;
     }
