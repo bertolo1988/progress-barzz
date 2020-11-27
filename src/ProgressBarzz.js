@@ -10,6 +10,7 @@ class ProgressBarzz {
       throw new Error(
         'ProgressBarzz|Maximum number of ticks needs to be specified!'
       );
+    this.etaMomentFormat = 'lll';
     this.begin = moment();
     this.tickCount = 0;
     this.maxTicks = maxTicks;
@@ -28,6 +29,18 @@ class ProgressBarzz {
     return moment().diff(this.begin) / this.tickCount;
   }
 
+  _getAverageRoundedUpTimePerTickSeconds() {
+    return Math.ceil(this._getAverageTimePerTickMs() / 1000);
+  }
+
+  _getEstimatedEndTime() {
+    let averageSecondsPerTick = this._getAverageRoundedUpTimePerTickSeconds();
+    let ticksLeft = this.maxTicks - this.tickCount;
+    let secondsLeft = ticksLeft * averageSecondsPerTick;
+    let endMoment = moment().add(secondsLeft, 'seconds');
+    return endMoment.format(this.etaMomentFormat);
+  }
+
   _renderBarGraph(percentage) {
     let bar = '';
     let completes = Math.floor((percentage * PROGRESS_BAR_SIZE) / 100);
@@ -42,15 +55,9 @@ class ProgressBarzz {
   }
 
   _render() {
-    /*     let averageTimePerTickMs = this._getAverageTimePerTickMs();
-    let result = done + '/' + todo;
-    result += ' ' + drawBar();
-    result += ' ' + getPercentage() + '%';
-    result += ' ' + parseInt(getAverageTickTime() / 1000) + 's/tick';
-    result += ' ETA:' + getEstimatedEndTime(); */
     return `${this.tickCount}/${this.maxTicks} ${this._renderBarGraph(
       this._getPercentage()
-    )} ${this._getPercentage()}%`;
+    )} ${this._getPercentage()}% ${this._getAverageRoundedUpTimePerTickSeconds()}s/tick ETA:${this._getEstimatedEndTime()}`;
   }
 }
 

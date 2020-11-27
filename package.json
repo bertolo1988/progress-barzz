@@ -2,7 +2,7 @@
   "name": "progress-barzz",
   "version": "1.0.2",
   "description": "A simple textual progress bar for javascript",
-  "main": "dist/progress-barzz.js",
+  "main": "src/ProgressBarzz.js",
   "homepage": "https://github.com/bertolo1988/progress-barzz#readme",
   "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
   "scripts": {
