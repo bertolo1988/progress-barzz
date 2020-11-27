@@ -1,6 +1,6 @@
 {
   "name": "progress-barzz",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "A simple textual progress bar for javascript",
   "main": "src/ProgressBarzz.js",
   "homepage": "https://github.com/bertolo1988/progress-barzz#readme",
